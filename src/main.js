@@ -3,6 +3,7 @@ const mole = document.querySelector('.mole')
 const timeleft = document.getElementById('time')
 const score = document.getElementById('score')
 
+let time = 60
 let result = 0
 let hitPosition = 0
 
@@ -27,7 +28,12 @@ squares.forEach(square => {
 })
 
 function quitTime() {
-  timeleft.textContent--
+  time--
+  timeleft.textContent = time
+  if (time == 0) {
+    alert('The time end! Score: ' + result)
+    document.location.reload()
+  }
 }
 
 setInterval(quitTime, 1000)

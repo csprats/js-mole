@@ -7,7 +7,10 @@ html {
   width: 606px;
   height: 606px;
   display: flex;
+  margin: auto;
   flex-wrap: wrap;
+  border: solid black 1px;
+  border-radius: 4px;
 }
 
 .square {
@@ -17,5 +20,6 @@ html {
 }
 
 .mole {
-  background-color: blue;
+  background-image: url('../mole.png');
+  background-size: cover;
 }
